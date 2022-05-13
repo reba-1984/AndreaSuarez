@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+    <header>
+        <img src="../images/logo_as_texto.png" alt="Logotipo pastelería creativa" class="logo">
+        <nav>
+            <ul>
+                <li>
+                    <img src="../images/icono_menu.svg" alt="Icono menú" class="imgMenu">
+                    <ul>
+                        <li>
+                            <a href="../index.html" class="navMenu">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="productos.html" class="navMenu">Productos</a>
+                        </li>
+                        <li>
+                            <a href="galeria.html" class="navMenu">Galería</a>
+                        </li>
+                        <li>
+                            <a href="sobre_mi.html" class="navMenu">Sobre mí</a>
+                        </li>
+                        <li>
+                            <a href="contacto.html" class="navMenu">Contacto</a>
+                        </li>
+                    </ul>
+                </li>    
+            </ul>
+        </nav>
+    </header>
+    <main>
+            <h1>Formulario de Contacto</h1>
+            <hr>
+            <div class="mainContacto">
+                <form class="formContacto">
+                        <h2 class="tituloForm">Por favor completa la información</h2>
+                        <div class="nombre">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" name="nombre" placeholder="Ingresa tu nombre">
+                        </div>
+                        <div class="email">
+                            <label for="mail">E-mail:</label>
+                            <input type="email" name="mail" placeholder="Ingresa tu e-mail">
+                        </div>
+                        <div class="telefono">
+                            <label for="telefono">Teléfono:</label>
+                            <input type="text" name="telefono" placeholder="Ingresa tu teléfono">
+                        </div>
+                        <div class="pais">
+                            <label for="pais">País:</label>
+                            <select name="pais" id="pais">
+                                <option value="Argentina">Argentina</option>
+                                <option value="Colombia">Colombia</option>
+                                <option value="Mexico">Mexico</option>
+                                <option value="Uruguay">Uruguay</option>
+                                <option value="USA">USA</option>
+                            </select>
+                        </div>
+                        <div class="limpiar">
+                            <input type="reset" value="Limpiar">
+                        </div>
+                        <div class="enviar">
+                            <input type="submit" value="Enviar">
+                        </div>
+                </form>
+            </div>
+    </main>
+    <footer>
+        <p>© Todos los derechos reservados, <br> Desarrollado por Ramón Barrera</p>
+    </footer>
+</body>
+</html>

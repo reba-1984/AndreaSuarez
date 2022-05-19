@@ -190,7 +190,7 @@ article .container{
     font-size: 1.4rem;
     padding: 10px;
     margin: 0 10px ;
-    background-color: #DB6A8F;
+    background-image: linear-gradient(to top, #993366, #DB6A8F);
     color: white;
     display: inline-block;
     border-radius: 10px;
@@ -201,8 +201,9 @@ article .container{
 }
 
 .descripcion a:hover{
-    color: #993366;
-    font-weight: 600;
+    font-weight: 500;
+    box-shadow: 4px 4px 10px rgb(0, 0, 0, 0.3);
+    transform: scale(1.1);
 }
 
 aside h3{
@@ -536,10 +537,26 @@ para el grid version para movil*/
 .containerImgSobreMi .imgAndrea{
     width: 75%;
     max-width: 300px;
-    border-radius: 20px;
+    align-self: center;
+    border-radius: 10px;
     box-shadow: 6px 6px 10px rgb(0, 0, 0, 0.3);
+    animation-duration: 2s;
+    animation-name: aparecer;
+   
 }
 
+/*estilo para animacion*/
+
+@keyframes aparecer {
+    0% {
+        width: 0%;
+    }
+    
+    100% {
+        width: 100%;
+    }
+ }
+ 
 .nombreSobreMi h3{
     text-align: center;
     font-size: 1.4rem;
@@ -721,13 +738,24 @@ form label{
 }
 
 form .limpiar input, form .enviar input{
-    background-color: #DB6A8F;
+    background-image: linear-gradient(to top, #993366, #DB6A8F);
     border: none;
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
     width: 100%;
 }
+
+form .limpiar input:hover, form .enviar input:hover{
+    transform: scale(1.05);
+    box-shadow: 4px 4px 10px rgb(0, 0, 0, 0.3);
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
 
 /*media query Contacto 720px______________________________________________________________________________720px*/
 
@@ -790,6 +818,14 @@ flex-direction: column;
 align-items: center;
 }
 
+.sectionProducto .imgProducto, article .container, .containerImgGaleria{
+    transition: all 1s;
+}
+
+.sectionProducto .imgProducto:hover, article .container:hover, .containerImgGaleria:hover{
+    transform: scale(1.1);
+}
+
 .sectionProducto img{
     width: auto;
     max-width: 300px;
@@ -811,10 +847,18 @@ margin-top: 20px;
 }
 
 .etiquetaProducto .botonMas{
-    background-color: #DB6A8F;
+    background-image: linear-gradient(to top, #993366, #DB6A8F);
     padding: 0px 20px;
     border-radius: 10px;
     color: white;
     font-size: 2rem;
     font-weight: 900;
 }
+
+.etiquetaProducto .botonMas:hover{
+    transform: scale(1.1);
+    box-shadow: 4px 4px 10px rgb(0, 0, 0, 0.3);
+    cursor:pointer;
+}
+
+

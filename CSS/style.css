@@ -103,9 +103,25 @@ nav ul li:hover > ul{
     font-size: 1rem;
 }
 
+a .navMenu{
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: 50px;
+}
+
 .navMenu:hover{
     color: #DB6A8F;
     font-weight: 500;
+}
+
+nav .navEstilo{
+    background-color: #993366;
+}
+
+ul .navbar-nav{
+    width: 500px;
 }
 
 /*estilos para el banner____________________________*/
@@ -150,13 +166,13 @@ article h2{
     margin: 20px;
 }
 
-article .container{
+article .containerImgCupcake{
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
 }
 
-.container img{
+.containerImgCupcake img{
     width: 90vw;
     max-width: 400px;
     border-radius: 20px;
@@ -292,6 +308,8 @@ footer{
         font-size: 1.2rem;
     }
 
+    
+
     /*Banner 720px*/
 
     .banner{
@@ -315,12 +333,12 @@ footer{
         align-content: flex-start;
     }
 
-    article .container{
+    article .containerImgCupcake{
         display: flex;
         margin-bottom: 20px;
     }
 
-    .container img{
+    .containerImgCupcake img{
         max-width: 200px;
     }
 
@@ -408,6 +426,11 @@ footer{
         padding: 30px;
     }
 
+    ul.navbar-nav .navBootstrap{
+        justify-content: center;
+        align-items: center;
+    }
+
     /*Banner 1280px*/
 
     .banner .slogan{
@@ -446,7 +469,7 @@ footer{
         position: relative;
     }
 
-    .container img{
+    .containerImgCupcake img{
         max-width: 25vw;
         margin-right: 20px;
     }
@@ -466,7 +489,7 @@ footer{
 
     .descripcion p{
         font-size: 1.4rem;
-        max-width: 500px;
+        max-width: 800px;
         padding: 0%;
         margin-bottom: 20px;
         text-align: justify;
@@ -514,6 +537,7 @@ para el grid version para movil*/
 }
 
 .tituloSobreMi{
+    margin-top: 20px;
     grid-area: tituloSobreMi;
 }
 
@@ -644,26 +668,24 @@ para el grid version para movil*/
 
 /*estilos galería con flex box*/
 
-.seccionGaleria{
-    display: flex;
-    margin: 40px;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
+
 
 .imgGaleria{
     width: 100%;
+    
     height: max-content;
     
 }
 
 .containerImgGaleria{
-    max-width: 360px;
-    max-height: 240px;
+    width: 360px;
+    height: 240px;
     margin: 20px;
+    padding: 0px;
     border-radius: 30px;
     box-shadow: 6px 6px 10px rgb(0, 0, 0, 0.3);
     overflow: hidden;
+    background-size: cover;
 }
 
 /*estilos de Contacto
@@ -835,10 +857,10 @@ align-items: center;
 
 .sectionProducto .etiquetaProducto{
     width: 100%;
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .etiquetaProducto .nombreProducto{

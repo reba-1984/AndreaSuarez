@@ -672,8 +672,9 @@ para el grid version para movil*/
 
 .imgGaleria{
     width: 100%;
-    
+    border-radius: none;
     height: max-content;
+    box-shadow: none;
     
 }
 

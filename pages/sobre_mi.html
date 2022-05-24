@@ -6,35 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre mí</title>
+    <!--Link a Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- link de css-->
     <link rel="stylesheet" href="../CSS/style.css">
 </head>
 
 <body>
     <header>
         <img src="../images/logo_as_texto.png" alt="Logotipo pastelería creativa" class="logo">
-        <nav>
-            <ul>
-                <li>
-                    <img src="../images/icono_menu.svg" alt="Icono menú" class="imgMenu">
-                    <ul>
-                        <li>
-                            <a href="../index.html" class="navMenu">Inicio</a>
+        <nav class="navbar navbar-expand-lg navEstilo">
+            <div class="container-fluid ">
+                <a class="navbar-brand" href="#"> </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarNav">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item">
+                            <a class="nav-link navMenu" aria-current="page" href="../index.html">Inicio</a>
                         </li>
-                        <li>
-                            <a href="productos.html" class="navMenu">Productos</a>
+                        <li class="nav-item">
+                            <a class="nav-link navMenu" href="../pages/productos.html">Productos</a>
                         </li>
-                        <li>
-                            <a href="galeria.html" class="navMenu">Galería</a>
+                        <li class="nav-item">
+                            <a class="nav-link navMenu" href="../pages/galeria.html">Galería</a>
                         </li>
-                        <li>
-                            <a href="sobre_mi.html" class="navMenu">Sobre mí</a>
+                        <li class="nav-item">
+                            <a class="nav-link navMenu" href="../pages/sobre_mi.html">Sobre mí</a>
                         </li>
-                        <li>
-                            <a href="contacto.html" class="navMenu">Contacto</a>
+                        <li class="nav-item">
+                            <a class="nav-link navMenu" href="../pages/">Contacto</a>
                         </li>
                     </ul>
-                </li>    
-            </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <main class="mainSobreMi">
@@ -75,10 +83,23 @@
 
     </main>
 
-    <footer>
-        <p>© Todos los derechos reservados, <br> Desarrollado por Ramón Barrera</p>
+    
+    <!--footer con bootstrap-->
+    <footer id="footer">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col">
+                    <p>© Todos los derechos reservados, <br> Desarrollado por Ramón Barrera</p>
+                </div>
+            </div>
+        </div>
+        
     </footer>
 
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

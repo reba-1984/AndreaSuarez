@@ -423,8 +423,6 @@ footer{
     article{
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        flex-wrap: wrap;
         margin-bottom: 20px;
     }
 
@@ -441,17 +439,25 @@ footer{
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: center;
         height: auto;
         position: relative;
     }
 
-    .container img{
+    section .container{
+        display: flex;
+        width: max-content;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    section .container img{
         max-width: 25vw;
         margin-right: 20px;
     }
 
-    .article .descripcion{
+    section .descripcion{
+        width: 500px;
         flex: 20%;
         display: flex;
         justify-content: space-between;
@@ -466,7 +472,7 @@ footer{
 
     .descripcion p{
         font-size: 1.4rem;
-        max-width: 500px;
+        max-width: 400px;
         padding: 0%;
         margin-bottom: 20px;
         text-align: justify;

@@ -240,6 +240,8 @@ header{
     }
 }
 
+/*media query  720px______________________________________________________________________________720px*/
+
 @media screen and (min-width:720px) {
 
     header{
@@ -378,6 +380,154 @@ header{
             display: none;
         } 
     } 
-}    
+}   
+
+/*media query 1280_________________________________________________________________1280px*/
+
+@media screen and (min-width:1280px) {
+
+    /*Header 1280*/
+
+    header{
+        flex-direction: row;
+        justify-content: space-between;
+
+        .logo{
+            margin: 0 60px;
+            padding: 30px;
+        }
+
+        /*nav 1280px*/
+
+        nav{
+            width: fit-content;
+            justify-content: center;
+            margin-right: 60px; 
+
+            ul{
+                li{
+                    ul{
+                        li{
+                            padding: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mainInicio{
+    
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "banner banner banner"
+        "titulo titulo titulo "
+        "article article aside";
+        column-gap: 1.5rem;
+
+        /*Banner 1280px*/
+
+        .banner{
+            .slogan{
+                font-size: 7vw;
+            }
+        }
+
+        .titulo{
+            h1{
+                font-size: 3rem;
+            }
+        }
+
+         /*section 1280px*/
+
+        .article{
+            
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+
+            h2{
+                font-size: 2.5rem;
+            }
+
+            section{
+                margin: 0px 0px 0px 20px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                height: auto;
+                position: relative;
+
+                .container{
+                    display: flex;
+                    width: max-content;
+                    justify-content: center;
+                    margin-bottom: 20px;
+
+                    img{
+                        max-width: 25vw;
+                        margin-right: 20px;
+                    }
+                }
+
+                .descripcion{
+                    width: 500px;
+                    flex: 20%;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    margin: 0%;
+
+                    h3{
+                        font-size: 2rem;
+                    }
+
+                    p{
+                        font-size: 1.4rem;
+                        max-width: 400px;
+                        padding: 0%;
+                        margin-bottom: 20px;
+                        text-align: justify;
+                    }
+
+                    a{
+                        font-size: 1.2rem;
+                        align-self: center;
+                        margin: 0%;
+                        align-self: flex-end
+                    }
+
+                }
+            }
+
+        }
+        
+        /*Aside 1280px*/
+
+        .aside{
+            h3{
+                margin: 20px 20px 20px 0;
+                font-size: 2rem;
+            }
+
+            .video{
+                height: auto;
+                width: auto;
+                margin-right: 20px; 
+                margin-top: 0%;  
+            }
+
+            iframe{
+
+                max-width: 30vw;
+                max-height: 20vw;
+            }
+        }
+    }
+}
 
 

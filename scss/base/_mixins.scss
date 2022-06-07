@@ -1,0 +1,27 @@
+//mixin me sirve pqara reutilizar estilos o codigo
+
+@import "variables";
+
+
+//sin parametros
+@mixin tituloH1 {
+    color:$color-secundario;
+    text-align: center;
+    margin: 20px;
+    font-weight: 600;
+    font-size: 1.7rem;
+}
+
+@mixin tituloH2 {
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-align: center;
+    margin: 20px;
+}
+
+@mixin tituloH3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+}

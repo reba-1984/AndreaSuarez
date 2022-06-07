@@ -1,4 +1,6 @@
 @import "base/variables";
+@import "base/mixins";
+@import "base/extend";
 
 *{
     margin: 0%;
@@ -124,11 +126,7 @@ header{
         grid-area: titulo;
 
         h1{
-            color:$color-principal;
-            text-align: center;
-            margin: 20px;
-            font-weight: 600;
-            font-size: 1.7rem;
+            @include tituloH1;
         }
     }
     
@@ -136,10 +134,7 @@ header{
         grid-area: article;
 
         h2{
-            font-size: 1.6rem;
-            font-weight: 500;
-            text-align: center;
-            margin: 20px;
+            @include tituloH2;
         }
 
         .container{
@@ -152,7 +147,15 @@ header{
                 max-width: 400px;
                 border-radius: 20px;
                 box-shadow: $sombra-grande;
-            }
+            }            
+        }
+
+        .container:hover{
+            transform: scale(1.05);
+        }
+
+        .container{
+            transition: all 1s;
         }
 
         .descripcion{
@@ -162,11 +165,8 @@ header{
             align-items: center;
 
             h3{
+                @include tituloH3;
                 color: $color-principal;
-                font-size: 1.5rem;
-                font-weight: 500;
-                text-align: center;
-                margin-bottom: 20px;
             }
 
             p{
@@ -178,23 +178,13 @@ header{
             }
 
             a{
-                font-size: 1.4rem;
-                padding: 10px;
-                margin: 0 10px ;
-                background-image: $color-degradado;
-                color: $color-blanco;
-                display: inline-block;
-                border-radius: 10px;
-                text-decoration: none;
-                max-width: max-content;
-                align-self: center;
-                text-align: center;    
+                @extend %boton;    
             }
 
             a:hover{
                 font-weight: 500;
                 box-shadow: $sombra-peque;
-                transform: scale(1.1);
+                transform: scale(1.05);
             }
         }
     }
@@ -203,10 +193,7 @@ header{
         grid-area: aside;
 
         h3{
-            font-size: 1.5rem;
-            font-weight: 500;
-            text-align: center;   
-            margin-bottom: 20px;
+            @include tituloH3;
         }
 
         .video{
@@ -346,7 +333,7 @@ header{
                     a{
                         font-size: 1.2rem;
                         align-self: center;
-                        margin: 0%;
+                        margin: 0% ;
                     }
                 }
             }           
@@ -497,7 +484,7 @@ header{
                     a{
                         font-size: 1.2rem;
                         align-self: center;
-                        margin: 0%;
+                        margin: 10px;
                         align-self: flex-end
                     }
 
@@ -529,5 +516,449 @@ header{
         }
     }
 }
+
+/*estilos de mainSobreMi 
+para el grid version para movil*/
+
+.mainSobreMi{
+    display: grid;
+    grid-template-areas: 
+    "tituloSobreMi"
+    "containerImgSobreMi"
+    "nombreSobreMi"
+    "parrafoSobreMi";
+
+    .tituloSobreMi{
+        grid-area: tituloSobreMi;
+        h1{
+            @include tituloH1;
+        }
+    }
+    
+    .containerImgSobreMi{
+        grid-area: containerImgSobreMi;
+        display: flex;
+        justify-content: center;
+        padding: 25px;
+    
+        .imgAndrea{
+            width: 75%;
+            max-width: 300px;
+            align-self: center;
+            border-radius: 10px;
+            box-shadow: $sombra-grande;
+            animation-duration: 2s;
+            animation-name: aparecer;
+        }
+    }
+    
+    .nombreSobreMi{
+        grid-area: nombreSobreMi;
+        padding: 0 20px;
+
+        h2{
+            @include tituloH2;
+        }
+    }
+    
+    .parrafoSobreMi{
+        grid-area: parrafoSobreMi;
+        padding: 20px;
+
+        p{
+            text-align: justify;
+            font-size: 1.1rem;
+        }
+    }
+
+    /*estilo para animacion*/
+
+    @keyframes aparecer {
+        0% {
+            width: 0%;
+        }
+        
+        100% {
+            width: 100%;
+        }
+    }
+    
+}
+
+/*media query Sobre Mi 720px______________________________________________________________________________720px*/
+
+@media screen and (min-width:720px) {
+
+    .mainSobreMi{
+        display: grid;
+        grid-template-columns: 2fr 3fr ;
+        grid-template-areas: 
+        "tituloSobreMi tituloSobreMi"
+        "nombreSobreMi nombreSobreMi"
+        "containerImgSobreMi parrafoSobreMi";
+
+        .tituloSobreMi{
+            h1{
+                font-size: 2rem;
+            }
+        }
+        
+        .nombreSobreMi{
+            h2{
+                text-align: center;
+                font-size: 1.6rem;
+                margin-top: 30px;
+            }
+        } 
+    
+        .containerImgSobreMi{
+            align-items: flex-start;
+            margin-left: 25px;
+        }
+
+        .containerImgSobreMi{
+            .imgAndrea{
+                width: 100%;
+                max-width: 400px;
+            }
+        } 
+            
+        .parrafoSobreMi{
+            margin-right: 25px;
+        }
+    }
+}
+
+/*media query Sobre Mi 1280px______________________________________________________________________________1280px*/
+
+@media screen and (min-width:1280px) {
+
+    .mainSobreMi{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+        "tituloSobreMi  tituloSobreMi tituloSobreMi"
+        "containerImgSobreMi nombreSobreMi nombreSobreMi"
+        "containerImgSobreMi parrafoSobreMi parrafoSobreMi";
+
+        .tituloSobreMi{
+            h1{
+                font-size: 3rem;
+            }
+        }
+
+        .nombreSobreMi{
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            h2{
+                font-size: 2rem;
+                padding-bottom: 30px;
+            }
+        }
+    
+        .containerImgSobreMi{
+
+            .imgAndrea{
+                width: 100%;
+                max-width: 450px;
+            }
+        }
+    
+        .parrafoSobreMi{
+            margin-right: 60px;
+    
+            p{
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+
+/*estilos galería con flex box*/
+
+main{    
+    h1{
+         @include tituloH1;
+    }    
+    
+    
+    .seccionGaleria{
+        display: flex;
+        margin: 40px;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    
+        .containerImgGaleria{
+            max-width: 360px;
+            max-height: 240px;
+            margin: 20px;
+            border-radius: 30px;
+            box-shadow: $sombra-grande;
+            overflow: hidden;
+        
+            .imgGaleria{
+                width: 100%;
+                height: max-content;
+                
+            }
+        }
+    
+        .containerImgGaleria{
+            transition: all 1s;
+        }
+    
+        .containerImgGaleria:hover{
+            transform: scale(1.1);
+        }
+    }
+}
+
+
+/*estilos de Producto
+para el grid version para movil*/
+
+main{
+    h1{
+        @include tituloH1;
+    }
+
+    .mainProductos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        .sectionProducto{
+            background-color: #FFEDE5;
+            border-radius: 25px;
+            margin: 20px;
+            padding: 20px;
+            width: max-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .imgProducto{
+                transition: all 1s;
+            }
+
+            .imgProducto:hover{
+                transform: scale(1.05);
+            }
+
+            img{
+                width: auto;
+                max-width: 300px;
+                border-radius: 20px;
+                box-shadow: $sombra-grande;
+            }
+
+            .etiquetaProducto{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+
+            a{
+                @extend %boton;   
+                padding: 5px 20px; 
+                margin: 0 0;
+                font-weight: bold;
+                font-size: 1.6rem;
+            }
+
+            a:hover{
+                font-weight: 800;
+                box-shadow: $sombra-peque;
+                transform: scale(1.05);
+            }
+            }
+
+            .nombreProducto{
+                font-size: 1rem;
+                max-width: 220px;
+            }
+            
+
+        }
+    }
+
+}
+
+/*estilos de Contacto
+para el grid version para movil*/
+
+main{
+    h1{
+        @include tituloH1;
+    }
+
+    .formContacto{
+        background-color: #FFEDE5;
+        border: none;
+        margin: 20px 5%;
+        padding-bottom: 10px;
+        border-radius: 20px;
+        display: grid;
+        grid-template-areas: 
+        "legend"
+        "nombre"
+        "email"
+        "telefono"
+        "pais"
+        "limpiar"
+        "enviar";
+
+        .tituloForm{
+            font-size: 1.4rem;
+            grid-area: legend;
+            margin: 20px;
+            text-align: center;
+        }
+
+        .nombre{
+            grid-area: nombre;
+        }
+
+        .email{
+            grid-area: email;
+        }
+        
+        .telefono{
+            grid-area: telefono;
+        }
+        
+        .pais{
+            grid-area: pais;
+        }
+
+        .limpiar{
+            grid-area: limpiar;
+        }
+        
+        .enviar{
+            grid-area: enviar;
+        }
+        
+
+
+        div{
+            display: flex;
+            flex-direction: column;
+            margin: 10px 20px;
+        }
+        
+        input, select{
+            border: solid 2px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 10px;
+        }
+        
+        label{
+            color: $color-principal;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+            margin-left: 5px;
+        }
+        
+        .limpiar input, .enviar input{
+            background-image: $color-degradado;
+            border: none;
+            color: $color-blanco;
+            font-size: 1.2rem;
+            font-weight: bold;
+            width: 100%;
+        }
+        
+        .limpiar input:hover, .enviar input:hover{
+            transform: scale(1.05);
+            box-shadow: $sombra-peque;
+        }
+        
+    }
+
+    
+}
+
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+
+/*media query Contacto 720px______________________________________________________________________________720px*/
+
+@media screen and (min-width:720px) {
+
+    main{
+        .formContacto{
+            margin: 20px 10%;
+            display: grid;
+            grid-template-areas: 
+            "legend legend"
+            "nombre nombre"
+            "email email"
+            "telefono telefono"
+            "pais pais"
+            "limpiar enviar";
+    
+            .tituloForm{
+                font-size: 1.6rem;
+            }    
+        
+        }
+    }
+
+}
+
+/*media query Contacto 1280px______________________________________________________________________________720px*/
+
+@media screen and (min-width:1280px) {
+    main{
+        .mainContacto{
+            display: flex;
+            justify-content: center;
+        }
+        .formContacto{        
+            .tituloForm{
+                font-size: 2rem;
+            } 
+        }
+    }
+}
+
+
+/*media query Galeria, productos y contacto 720px______________________________________________________________________________720px*/
+
+@media screen and (min-width:720px) {
+
+    main{
+        h1{
+            font-size: 2rem;
+        }     
+    }
+}
+
+/*media query Galeria 1280px______________________________________________________________________________1280px*/
+
+@media screen and (min-width:1280px) {
+
+    main{
+        h1{
+            font-size: 3rem;
+        }     
+    }
+}
+
+
+
+
+
+
+
 
 

@@ -510,6 +510,11 @@ main .mainProductos {
       font-size: 1rem;
       max-width: 220px; }
 
+@media screen and (min-width: 1280px) {
+  main .mainProductos {
+    padding-left: 30px;
+    padding-right: 30px; } }
+
 /*estilos de Contacto
 para el grid version para movil*/
 main h1 {

@@ -730,7 +730,7 @@ main{
         justify-content: space-evenly;
 
         .sectionProducto{
-            background-color: #FFEDE5;
+            background-color: $color-terciario;
             border-radius: 25px;
             margin: 20px;
             padding: 20px;
@@ -787,6 +787,15 @@ main{
 
 }
 
+@media screen and (min-width:1280px) {
+    main{
+        .mainProductos{
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+}
+
 /*estilos de Contacto
 para el grid version para movil*/
 
@@ -796,7 +805,7 @@ main{
     }
 
     .formContacto{
-        background-color: #FFEDE5;
+        background-color: $color-terciario;
         border: none;
         margin: 20px 5%;
         padding-bottom: 10px;
@@ -851,7 +860,7 @@ main{
         }
         
         input, select{
-            border: solid 2px rgba(0, 0, 0, 0.1);
+            border: $borde;
             border-radius: 10px;
             padding: 10px;
         }

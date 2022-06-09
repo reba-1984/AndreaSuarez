@@ -570,9 +570,28 @@ main .formContacto {
     font-size: 1.2rem;
     font-weight: bold;
     width: 100%; }
-  main .formContacto .limpiar input:hover, main .formContacto .enviar input:hover {
-    transform: scale(1.05);
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); }
+    main .formContacto .limpiar input:hover, main .formContacto .enviar input:hover {
+      transform: scale(1.05);
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); }
+
+main .tituloRedes {
+  font-size: 1.4rem;
+  grid-area: legend;
+  margin: 20px;
+  text-align: center; }
+
+main .sectionRedes {
+  display: flex;
+  justify-content: center; }
+  main .sectionRedes a {
+    margin-bottom: 30px; }
+    main .sectionRedes a .redes {
+      width: 60px;
+      margin: 10px 30px;
+      border-radius: 50%; }
+      main .sectionRedes a .redes:hover {
+        transform: scale(1.05);
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3); }
 
 input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -585,7 +604,9 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     display: grid;
     grid-template-areas: "legend legend" "nombre nombre" "email email" "telefono telefono" "pais pais" "limpiar enviar"; }
     main .formContacto .tituloForm {
-      font-size: 1.6rem; } }
+      font-size: 1.6rem; }
+  main .tituloRedes {
+    font-size: 1.6rem; } }
 
 /*media query Contacto 1280px______________________________________________________________________________720px*/
 @media screen and (min-width: 1280px) {
@@ -593,7 +614,9 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     display: flex;
     justify-content: center; }
   main .formContacto .tituloForm {
-    font-size: 2rem; } }
+    font-size: 1.8rem; }
+  main .tituloRedes {
+    font-size: 1.8rem; } }
 
 /*media query Galeria, productos y contacto 720px______________________________________________________________________________720px*/
 @media screen and (min-width: 720px) {

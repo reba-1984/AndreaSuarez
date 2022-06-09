@@ -850,8 +850,6 @@ main{
         .enviar{
             grid-area: enviar;
         }
-        
-
 
         div{
             display: flex;
@@ -880,15 +878,36 @@ main{
             font-size: 1.2rem;
             font-weight: bold;
             width: 100%;
-        }
-        
-        .limpiar input:hover, .enviar input:hover{
-            transform: scale(1.05);
-            box-shadow: $sombra-peque;
+            &:hover{
+                transform: scale(1.05);
+                box-shadow: $sombra-peque;
+            }
         }
         
     }
-
+    .tituloRedes{
+        font-size: 1.4rem;
+            grid-area: legend;
+            margin: 20px;
+            text-align: center;
+    }
+    .sectionRedes{
+        display: flex;
+        justify-content: center;
+        a{
+            margin-bottom: 30px;
+            .redes{
+                width: 60px;
+                margin: 10px 30px;
+                border-radius: 50%;
+                &:hover{
+                    transform: scale(1.05);
+                    box-shadow: $sombra-peque;
+                }
+            }
+        }
+        
+    }
     
 }
 
@@ -920,6 +939,9 @@ margin: 0;
             }    
         
         }
+        .tituloRedes{
+            font-size: 1.6rem;
+        } 
     }
 
 }
@@ -934,9 +956,12 @@ margin: 0;
         }
         .formContacto{        
             .tituloForm{
-                font-size: 2rem;
+                font-size: 1.8rem;
             } 
         }
+        .tituloRedes{
+            font-size: 1.8rem;
+        } 
     }
 }
 
